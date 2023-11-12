@@ -1,0 +1,931 @@
+fileFormatVersion: 2
+guid: 01d310ffbce76c248a911d32d5248e51
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 399
+        width: 172
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53f11efdc8a1844db60c940e266d4e8
+      internalID: 846227883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_1
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 400
+        width: 172
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec374408324a1245af56c896f1a5adc
+      internalID: 1785895787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_3
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 402
+        width: 76
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201d04a9e41433f49954c7fbf1300ffa
+      internalID: 1005714342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_4
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 402
+        width: 14
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe45b2d14ff72d4da039320926202a8
+      internalID: 1367779703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_5
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 295
+        width: 172
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2ac31ceb32e6440b4f50fc62819af7
+      internalID: 720294402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_6
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 296
+        width: 172
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a11a9a7596810489c665d2fcf7b359
+      internalID: 1883370472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_8
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 301
+        width: 76
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e0711117f635e4b9822d32dbd28714
+      internalID: 707061204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_9
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 301
+        width: 14
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c9ef7bb3062594da21c34a6c3c1c0b
+      internalID: 249861680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_10
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 198
+        width: 172
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427531019e86e534ea57e4ef7a35f070
+      internalID: -1070434836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_11
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 199
+        width: 172
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d508ba64b908a4dba7c0eb6c197e72
+      internalID: -1859303454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_13
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 210
+        width: 18
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cfe613a34061e4382355bc518e1b60
+      internalID: -330145407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_14
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 216
+        width: 22
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5feccf8f059c33d45bd7a0b7f7c255c0
+      internalID: -580924089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_15
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 194
+        width: 24
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41593ec31e91b584b89272f432784fa9
+      internalID: -1898470527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_16
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 193
+        width: 24
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49678db4d7ece7e4e9e91fce5a6d13ff
+      internalID: 1064150106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_17
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 15
+        width: 22
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc51adc7732ba9428d43d00cc638153
+      internalID: -1396108476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_18
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 109
+        width: 18
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b98f576a351044b9c9bef26131b3dd
+      internalID: -481435981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_19
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 145
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a39c5f9c0cf244b80f3ad103934047
+      internalID: 1159996370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_20
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 15
+        width: 22
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 86}
+        - {x: -11, y: 44}
+        - {x: 11, y: 44}
+        - {x: 11, y: 86}
+      - - {x: -11, y: -86}
+        - {x: -11, y: -44}
+        - {x: 11, y: -44}
+        - {x: 11, y: -86}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00c1b808d0fe9c4ea7a76b8ce73c44e
+      internalID: -670376595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_21
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 15
+        width: 18
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f38ccb64779d9478edcc7d25929ef4
+      internalID: 1138137192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_22
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 145
+        width: 22
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cfa11ecba2f52a40938d4f6800a3646
+      internalID: -1815815084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_23
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 100
+        width: 172
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2682eed2f43bf49a5f9373e8099ad4
+      internalID: -2962732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_24
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 89
+        width: 24
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ff586f60e4b9c49b855a3c0d05b273
+      internalID: -1938048954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_25
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 89
+        width: 24
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bf2d6dc1998634b96bef841576c491
+      internalID: -1656748633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_26
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 56
+        width: 20
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e516d486648205942b9a164df3715b4c
+      internalID: 356475317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_27
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 57
+        width: 22
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78ba458855ccea45aedf983c4dd3c68
+      internalID: 1897659332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_28
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 4
+        width: 22
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8f343027692ae4389d4f4c896c81e9
+      internalID: 2082335429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_29
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 4
+        width: 34
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917ad44cfbd4dc44da76a757894e084d
+      internalID: 16078859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_31
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 62
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4510f22418472de48837682849442ff3
+      internalID: 1444245601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_32
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 14
+        width: 48
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d216e23293c95c4597688e105d939f8
+      internalID: -610572187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_33
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ff819a8023a104fa764860399e9ef6
+      internalID: 1386641516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_34
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 15
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43912770a9725f84da270f39cc800df3
+      internalID: -1443264701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_36
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 16
+        width: 22
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc39277c9868404fb06eec2289095dc
+      internalID: 1057388712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 10
+        width: 24
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f11e184eeb124a4cbf5fc32d0c8bdc8
+      internalID: 1337588805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_7
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 15
+        width: 22
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cc371a0ad11d940bb18fd1f983ec1b
+      internalID: 2112708192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesStuff32px_doors_12
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 460
+        width: 172
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -86, y: 14}
+        - {x: -86, y: -13}
+        - {x: -69, y: -13}
+        - {x: -63, y: 2}
+        - {x: -63, y: 10}
+        - {x: -68, y: 14}
+      - - {x: 66, y: 14}
+        - {x: 66, y: -7}
+        - {x: 66, y: -13}
+        - {x: 86, y: -13}
+        - {x: 86, y: 14}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dcae12db2fdf64b86e33951638cb19
+      internalID: 431640000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tilesStuff32px_doors_0: 846227883
+      tilesStuff32px_doors_1: 1785895787
+      tilesStuff32px_doors_10: -1070434836
+      tilesStuff32px_doors_11: -1859303454
+      tilesStuff32px_doors_12: 431640000
+      tilesStuff32px_doors_13: -330145407
+      tilesStuff32px_doors_14: -580924089
+      tilesStuff32px_doors_15: -1898470527
+      tilesStuff32px_doors_16: 1064150106
+      tilesStuff32px_doors_17: -1396108476
+      tilesStuff32px_doors_18: -481435981
+      tilesStuff32px_doors_19: 1159996370
+      tilesStuff32px_doors_2: 1337588805
+      tilesStuff32px_doors_20: -670376595
+      tilesStuff32px_doors_21: 1138137192
+      tilesStuff32px_doors_22: -1815815084
+      tilesStuff32px_doors_23: -2962732
+      tilesStuff32px_doors_24: -1938048954
+      tilesStuff32px_doors_25: -1656748633
+      tilesStuff32px_doors_26: 356475317
+      tilesStuff32px_doors_27: 1897659332
+      tilesStuff32px_doors_28: 2082335429
+      tilesStuff32px_doors_29: 16078859
+      tilesStuff32px_doors_3: 1005714342
+      tilesStuff32px_doors_30: 339364590
+      tilesStuff32px_doors_31: 1444245601
+      tilesStuff32px_doors_32: -610572187
+      tilesStuff32px_doors_33: 1386641516
+      tilesStuff32px_doors_34: -1443264701
+      tilesStuff32px_doors_35: 1805647258
+      tilesStuff32px_doors_36: 1057388712
+      tilesStuff32px_doors_4: 1367779703
+      tilesStuff32px_doors_5: 720294402
+      tilesStuff32px_doors_6: 1883370472
+      tilesStuff32px_doors_7: 2112708192
+      tilesStuff32px_doors_8: 707061204
+      tilesStuff32px_doors_9: 249861680
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

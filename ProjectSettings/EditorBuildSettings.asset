@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/0_MainMenu.unity
+    guid: 28dbe6bc047de8f428bca21202236f43
+  - enabled: 1
+    path: Assets/Scenes/1_SelectionCharacter.unity
+    guid: 50e4a77f580258645ae245f035ca5b29
+  - enabled: 1
+    path: Assets/Scenes/2_Intro-InteriorHouse.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/3_Map1-Laboratory.unity
+    guid: b04d0a92cce73eb478daf89181e2101a
+  m_configObjects: {}

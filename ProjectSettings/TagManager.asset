@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Box
+  - AnimCapsula
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Boxes
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 3772330567
+    locked: 0
+  - name: Wall
+    uniqueID: 916789835
+    locked: 0
+  - name: Boxes
+    uniqueID: 2931778111
+    locked: 0
+  - name: Decoration
+    uniqueID: 3157945731
+    locked: 0
+  - name: Player
+    uniqueID: 1740703019
+    locked: 0
+  - name: SecondFloor
+    uniqueID: 3204964281
+    locked: 0
+  - name: UpDecoration
+    uniqueID: 44319357
+    locked: 0

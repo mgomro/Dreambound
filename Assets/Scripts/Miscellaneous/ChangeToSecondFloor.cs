@@ -19,7 +19,8 @@ public class ChangeToSecondFloor : MonoBehaviour
                 layer.sortingLayerName = "Decoration";
             }
 
-            cell.sortingLayerName = "Decoration";
+            if (cell != null)
+                cell.sortingLayerName = "Decoration";
             decorCollider.enabled = true;
             barrier.enabled = false;
         }

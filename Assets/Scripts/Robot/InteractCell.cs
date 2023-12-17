@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using static SoundFXMananger;
+
+public class InteractCell : InteractableInventory
+{
+    public InteractRobot interactRobot;
+    private Rigidbody2D rgbd2d;
+    private void Start()
+    {
+        rgbd2d = InitPlayer.playerObject.GetComponent<Rigidbody2D>();
+    }
+    public override void Interact(Item item)
+    {
+        Vector2 origin = rgbd2d.position * 1;
+        RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.up);
+
+        if (hit.collider != null)
+        {
+            if (hit.collider.CompareTag("Robot"))
+            {
+                SoundFXMananger.Instance.PlaySound(SoundType.ActivateRobot);
+                interactRobot.isActive = true;
+                DestroyItemInventory();
+            }
+        }
+    }
+
+    private void DestroyItemInventory()
+    {
+        int index = InventoryManager.Instance.GetSelectedSlot();
+        Destroy(InventoryManager.Instance.GetItem(index));
+    }
+}

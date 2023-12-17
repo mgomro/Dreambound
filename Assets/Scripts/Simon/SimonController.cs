@@ -1,23 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static SoundFXMananger;
 
 public class SimonController : MonoBehaviour
 {
-    //public GameObject[] buttons;
     public GameObject[] teslaCoils, buttons;
     public Sprite[] spriteButtons;
     public AnimationClip[] animations;
     public List<int> pattern = new List<int>();
     public List<int> playerPattern = new List<int>();
-    public float flashDuration = 2f;
+    public float flashDuration = 0.8f;
+    public int winCondition;
+
+    private bool startingGame = false;
+    private SimonAnimations startAnimations;
+
+    private void Start()
+    {
+        startAnimations = gameObject.GetComponent<SimonAnimations>();
+        DisableButtons();
+    }
 
     void AddColorToPattern()
     {
         int randomColor = Random.Range(0, 4);
         pattern.Add(randomColor);
     }
-
 
     IEnumerator PlayPattern()
     {
@@ -26,7 +35,7 @@ public class SimonController : MonoBehaviour
             yield return new WaitForSeconds(flashDuration);
             FlashButton(color);
         }
-        Invoke("EnabledButtons", 2f);
+        Invoke("EnabledButtons", 1.5f);
     }
 
 
@@ -39,11 +48,24 @@ public class SimonController : MonoBehaviour
 
         Sprite originalSprite = spriteRenderer.sprite;
 
-
+        switch (colorIndex)
+        {
+            case 0:
+                SoundFXMananger.Instance.PlaySound(SoundType.SimonDo);
+                break;
+            case 1:
+                SoundFXMananger.Instance.PlaySound(SoundType.SimonMi);
+                break;
+            case 2:
+                SoundFXMananger.Instance.PlaySound(SoundType.SimonSol);
+                break;
+            case 3:
+                SoundFXMananger.Instance.PlaySound(SoundType.SimonSi);
+                break;
+        }
         animator.Play(animations[colorIndex].name);
 
         StartCoroutine(RevertSpriteAfterDelay(animator, spriteRenderer, originalSprite));
-        //StopCoroutine(RevertSpriteAfterDelay(animator, spriteRenderer, originalSprite));
     }
 
     IEnumerator RevertSpriteAfterDelay(Animator animator, SpriteRenderer spriteRenderer, Sprite originalSprite)
@@ -74,7 +96,7 @@ public class SimonController : MonoBehaviour
         foreach (GameObject button in buttons)
         {
             button.GetComponent<SpriteRenderer>().sprite = spriteButtons[index];
-            button.GetComponent<InteractButtonSimon>().enabledButton = true;
+            button.GetComponent<CircleCollider2D>().enabled = true;
             index++;
         }
     }
@@ -83,7 +105,7 @@ public class SimonController : MonoBehaviour
     {
         foreach (GameObject button in buttons)
         {
-            button.GetComponent<InteractButtonSimon>().enabledButton = false;
+            button.GetComponent<CircleCollider2D>().enabled = false;
             button.GetComponent<SpriteRenderer>().sprite = spriteButtons[4];
         }
     }
@@ -93,22 +115,19 @@ public class SimonController : MonoBehaviour
         playerPattern.Add(colorIndex);
         if (CheckWinCondtion())
         {
-            Debug.Log("Has Ganado");
-
             DisableButtons();
-            gameObject.GetComponent<SimonAnimations>().EnabledAnimations();
+            StartCoroutine(startAnimations.EnabledAnimations());
         }
         else if (!CheckPlayerInput())
         {
+            SoundFXMananger.Instance.PlaySound(SoundType.Incorrect);
             DisableButtons();
-            Debug.Log("¡Te equivocaste! Reiniciando...");
             playerPattern.Clear();
             Invoke("StartGame", 2f);
         }
         else if (playerPattern.Count == pattern.Count)
         {
             DisableButtons();
-            Debug.Log("¡Secuencia correcta! Añadiendo nuevo color...");
             playerPattern.Clear();
             AddColorToPattern();
             StartCoroutine(PlayPattern());
@@ -117,8 +136,19 @@ public class SimonController : MonoBehaviour
     }
     private bool CheckWinCondtion()
     {
-        return playerPattern.Count == 6;
+        return playerPattern.Count == winCondition;
     }
+
+    public bool IsStarting()
+    {
+        return startingGame;
+    }
+
+    public void SetStarting()
+    {
+        startingGame = true;
+    }
+
     public void StartGame()
     {
         pattern.Clear();

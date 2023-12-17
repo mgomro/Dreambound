@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using static SoundFXMananger;
 
 public class SelectionCharacter : MonoBehaviour
 {
+    public LoadingScene loadingScene;
     private int index;
 
     [SerializeField] private Image imagen;
@@ -38,6 +40,7 @@ public class SelectionCharacter : MonoBehaviour
 
     public void NextCharacter()
     {
+        SoundFXMananger.Instance.PlaySound(SoundType.ClickMenu);
         if (index == gameManager.characters.Count -1)
         {
             index = 0;
@@ -52,6 +55,7 @@ public class SelectionCharacter : MonoBehaviour
 
     public void PrevCharacter()
     {
+        SoundFXMananger.Instance.PlaySound(SoundType.ClickMenu);
         if (index == 0)
         {
             index = gameManager.characters.Count - 1;
@@ -66,7 +70,13 @@ public class SelectionCharacter : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SoundFXMananger.Instance.PlaySound(SoundType.ClickMenu);
+        Invoke("LoadNextScene", 0.2f);
+    }
+
+    private void LoadNextScene()
+    {
+        loadingScene.StartLoading();
     }
 
 }

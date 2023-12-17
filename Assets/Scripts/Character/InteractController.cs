@@ -11,6 +11,14 @@ public class  Interactable : MonoBehaviour
     }
 }
 
+public class InteractableInventory : MonoBehaviour
+{
+    public virtual void Interact(Item item)
+    {
+
+    }
+}
+
 public class InteractController : MonoBehaviour
 {
     PlayerController playerController;
@@ -18,7 +26,6 @@ public class InteractController : MonoBehaviour
     [SerializeField] float offsetDistance = 1f;
     [SerializeField] float sizeOfInteractableArea = 1.2f;
     [SerializeField] float umbralInteraccion = 1.2f;
-
 
     private void Awake()
     {
@@ -28,52 +35,30 @@ public class InteractController : MonoBehaviour
 
     private void Update()
     {
-        //Check();
-
-        if (Input.GetMouseButtonDown(1) && GetDistanceInteract())
+        if (Input.GetMouseButtonDown(1))
         {
-            Interact();
+            if (GetDistanceInteract())
+            {
+                Interact();
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            HandleInventoryInteraction();
         }
     }
 
     public bool GetDistanceInteract()
     {
-
-        // Obtener la posición del personaje
         Vector3 posicionPersonaje = transform.position;
 
-        // Obtener la posición del ratón en el mundo
         Vector3 posicionRaton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        posicionRaton.z = 0; // Asegúrate de que la coordenada Z sea 0 (en el plano del juego)
+        posicionRaton.z = 0;
 
-        // Calcular la distancia entre el personaje y el ratón
         float distancia = Vector3.Distance(posicionPersonaje, posicionRaton);
-
-        // Si la distancia es menor a un cierto umbral, entonces el objeto puede ser interactuado
-        //float umbralInteraccion = 0.65f; // Ajusta este valor según tus necesidades
 
         return distancia < umbralInteraccion;
     }
-
-
-    /* private void Check()
-     {
-         Vector2 position = rgbd2d.position + characterController.lastMotionVector * offsetDistance;
-
-         Collider2D[] colliders = Physics2D.OverlapCircleAll(position, sizeOfInteractableArea);
-
-         foreach (Collider2D c in colliders)
-         {
-             Interactable hit = c.GetComponent<Interactable>();
-             if (hit != null)
-             {
-                 highlightController.Highlight(hit.gameObject);
-                 return;
-             }
-         }
-
-         highlightController.Hide();
-     }*/
 
     private void Interact()
     {
@@ -90,5 +75,39 @@ public class InteractController : MonoBehaviour
                 break;
             }
         }
+    }
+
+    private void HandleInventoryInteraction()
+    {
+        InventoryManager inventoryManager = InventoryManager.Instance;
+        int index = inventoryManager.GetSelectedSlot();
+        GameObject item = inventoryManager.GetItem(index);
+
+        if (item != null)
+        {
+            Item _item = item.GetComponent<InventoryItem>().item;
+            switch (_item.type)
+            {
+                case ItemType.Flask:
+                    item.GetComponent<InteractFlask>().Interact(_item);
+                    break;
+                case ItemType.Robot:
+                    item.GetComponent<InteractCell>().Interact(_item);
+                    break;
+                case ItemType.Note:
+                    item.GetComponent<InteractNote>().Interact(_item);
+                    break;
+            }
+        }
+    }
+
+    public void InteractingOff()
+    {
+        InitPlayer.playerObject.GetComponent<PlayerController>().canMove = true;
+    }
+
+    public void InteractingOn()
+    {
+        InitPlayer.playerObject.GetComponent<PlayerController>().canMove = false;
     }
 }

@@ -19,7 +19,8 @@ public class ChangeToFirstFloor : MonoBehaviour
                 layer.sortingLayerName = "UpDecoration";
             }
 
-            cell.sortingLayerName = "UpDecoration";
+            if (cell != null)
+                cell.sortingLayerName = "UpDecoration";
 
             decorCollider.enabled = false;
             barrier.enabled = true;

@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Box
   - AnimCapsula
+  - Lighter
+  - Morfeo
+  - Clio
+  - Robot
+  - LabFloor
+  - WoodenFloor
+  - MetalLadder
   layers:
   - Default
   - TransparentFX

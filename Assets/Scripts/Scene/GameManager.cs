@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager Instance;
 
     public List<Characters> characters;
     
     private void Awake()
     {
-         if (GameManager.instance == null) 
+         if (GameManager.Instance == null) 
          {
-             GameManager.instance = this;
+             GameManager.Instance = this;
              DontDestroyOnLoad(this.gameObject);
          }
          else
@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
          }
 
          SetDefaultCursor();
+    }
+
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 
     public void SetDefaultCursor()

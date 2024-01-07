@@ -87,6 +87,9 @@ namespace DialogueEditor
         private List<UIConversationButton> m_uiOptions;
         private int m_currentSelectedIndex;
 
+        // InteractController
+        private InteractController interactControllerPlayer;
+
 
         //--------------------------------------
         // Awake, Start, Destroy, Update
@@ -106,6 +109,13 @@ namespace DialogueEditor
             NpcIcon.sprite = BlankSprite;
             DialogueText.text = "";
             TurnOffUI();
+
+        }
+
+        private void Start()
+        {
+            if (InitPlayer.playerObject != null)
+                interactControllerPlayer = InitPlayer.playerObject.GetComponent<InteractController>();
         }
 
         private void OnDestroy()
@@ -151,6 +161,9 @@ namespace DialogueEditor
 
         public void StartConversation(NPCConversation conversation)
         {
+            if (interactControllerPlayer != null)
+                interactControllerPlayer.InteractingOn();
+
             m_conversation = conversation.Deserialize();
             if (OnConversationStarted != null)
                 OnConversationStarted.Invoke();
@@ -158,18 +171,19 @@ namespace DialogueEditor
             TurnOnUI();
             m_currentSpeech = m_conversation.Root;
             SetState(eState.TransitioningDialogueBoxOn);
-
-            InitPlayer.playerObject.GetComponent<InteractController>().InteractingOn();
+            
         }
 
         public void EndConversation()
-        {
+        {            
             SetState(eState.TransitioningDialogueOff);
 
             if (OnConversationEnded != null)
                 OnConversationEnded.Invoke();
 
-            InitPlayer.playerObject.GetComponent<InteractController>().InteractingOff();
+            if (interactControllerPlayer != null)
+                interactControllerPlayer.InteractingOff();
+
         }
 
         public void SelectNextOption()

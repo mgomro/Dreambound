@@ -16,7 +16,7 @@ public class ActivateLighOut : GameActivable
 
     IEnumerator StartLighOut()
     {
-        SoundManager.Instance.ChangeMusicGradually(gameAudio, 3f);
+        SoundManager.Instance.ChangeMusicGradually(gameAudio, 1f);
         yield return new WaitForSeconds(delay);
         SoundFXMananger.Instance.PlaySound(SoundType.ActivateLightOut);
         game.StartGame();

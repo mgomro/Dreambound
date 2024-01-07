@@ -49,7 +49,7 @@ public class CodeController : MonoBehaviour
         UpdateInitText();
         ClearArray();
         gameObject.SetActive(false);
-        GameManager.instance.SetDefaultCursor();
+        GameManager.Instance.SetDefaultCursor();
         InitPlayer.playerObject.GetComponent<InteractController>().InteractingOff();
     }
 

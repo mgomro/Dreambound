@@ -51,7 +51,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPlayer: {fileID: 6561489344213802330}
-  volumeFX: 0.2
+  volumeFX: 0.1
   WoodenFootstep: {fileID: 8300000, guid: 995798c911af37f4c9368956247b7faf, type: 3}
   LabFootstep: {fileID: 8300000, guid: 002cb4dcbf91ded439892003c6c53d05, type: 3}
   MetalLadderFootstep: {fileID: 8300000, guid: f50eb3c6c0c6df94c8feab8c04e30e39, type: 3}

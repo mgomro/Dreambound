@@ -10,7 +10,7 @@ public class SimonAnimations : MonoBehaviour
     public GameObject door;
     public IEnumerator EnabledAnimations()
     {
-        SoundManager.Instance.RestoreVolume(0.25f, 3f);
+        SoundManager.Instance.RestoreVolume(0.9f, 3f); // Restaurar el 90% del volumen
         int numAnimations = animations.Length;
         int numTeslaCoils = 3;
         int index = 0;

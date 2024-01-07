@@ -41,7 +41,7 @@ public class NotesManager : MonoBehaviour
     {
         TurnOffGUI();
         isActive = false;
-        GameManager.instance.SetDefaultCursor();
+        GameManager.Instance.SetDefaultCursor();
     }
 
     public bool IsActive()

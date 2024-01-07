@@ -7,19 +7,17 @@ public class InitPlayer : MonoBehaviour
 {
     public static GameObject playerObject;
     public static string playerName;
+    public static int index;
     void Awake()
     {
-        int index = PlayerPrefs.GetInt("PlayerIndex");
-        playerObject = Instantiate(GameManager.instance.characters[index].Character, transform.position, Quaternion.identity);
+        index = PlayerPrefs.GetInt("PlayerIndex");
+        playerName = GameManager.Instance.characters[index].Character.name;
 
-        playerName = GameManager.instance.characters[index].Character.name;
+        playerObject = Instantiate(GameManager.Instance.characters[index].Character, transform.position, Quaternion.identity);
+        playerObject.transform.localScale = new Vector3(1.5f, 1.5f, 1f);
+        playerObject.GetComponent<PlayerController>().speed = 5f;
 
-        int numScene = SceneManager.GetActiveScene().buildIndex;
-        if (numScene == 3)
-        {
-            playerObject.transform.localScale = new Vector3(1.5f, 1.5f, 1f);
-            playerObject.GetComponent<PlayerController>().speed = 5f;
-        }
-        SoundManager.Instance.PlayMainAudio(); // Eliminar antes de compilar el juego.
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }

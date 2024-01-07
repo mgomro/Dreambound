@@ -7,7 +7,7 @@ public class BoxesController : MonoBehaviour
 {
     public Vector2[] targetPositions;
     public float tolerance = 0.2f;
-    public BoxCollider2D resetBoxes;
+    public CircleCollider2D resetBoxes;
     public int winConditions;
     public GameObject door;
     public int boxesInTarget = 0;

@@ -21,7 +21,7 @@ public class ActivateSimon : GameActivable
         {
             simonController.SetStarting();
             InitCount();
-            SoundManager.Instance.LowerVolume(0.25f, 3f);
+            SoundManager.Instance.LowerVolume(0.9f, 3f); // Bajar volumen un 90%
         }
             
     }

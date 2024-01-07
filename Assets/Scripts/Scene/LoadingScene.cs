@@ -8,6 +8,7 @@ public class LoadingScene : MonoBehaviour
 {
     private TextMeshProUGUI loadingText;
     private bool loadingAnimationScene = true;
+    private int selectedLevel;
 
     private void Awake()
     {
@@ -18,27 +19,36 @@ public class LoadingScene : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void StartLoading()
+    public void StartLoadingIntro()
     {
         this.gameObject.SetActive(true);
+        selectedLevel = LevelManager.Instance.GetSelectedLevel();
         StartCoroutine(LoadScene());
     }
+
+    public void StartLoadingLevel()
+    {
+        this.gameObject.SetActive(true);
+        selectedLevel = SceneManager.GetActiveScene().buildIndex + 1; // Nivel correspondiente a la intro
+        StartCoroutine(LoadScene());
+    }
+
     private IEnumerator LoadScene()
     {
         int times = 0;
         while (loadingAnimationScene)
         {
             loadingText.text = "Cargando";
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.4f);
 
             loadingText.text = "Cargando .";
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.4f);
 
             loadingText.text = "Cargando . .";
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.4f);
 
             loadingText.text = "Cargando . . .";
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.4f);
 
             times++;
 
@@ -47,13 +57,13 @@ public class LoadingScene : MonoBehaviour
                 StopLoadingScene();
             }
         }
-        yield return new WaitForSeconds(4f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(selectedLevel);
     }
 
     private void StopLoadingScene()
     {
-        SoundManager.Instance.LoadNextSound(3f);
+        SoundManager.Instance.LoadNextSound(0.5f);
         loadingAnimationScene = false;
     }
 }

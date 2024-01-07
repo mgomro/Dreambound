@@ -18,7 +18,7 @@ public class SelectionCharacter : MonoBehaviour
 
     private void Start()
     {
-        gameManager = GameManager.instance;
+        gameManager = GameManager.Instance;
 
         index = PlayerPrefs.GetInt("PlayerIndex");
 
@@ -76,7 +76,7 @@ public class SelectionCharacter : MonoBehaviour
 
     private void LoadNextScene()
     {
-        loadingScene.StartLoading();
+        loadingScene.StartLoadingIntro();
     }
 
 }

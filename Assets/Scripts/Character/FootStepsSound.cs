@@ -5,8 +5,6 @@ using UnityEngine;
 public class FootStepsSound : MonoBehaviour
 {
     public AudioSource soundPlayer;
-    public float volumeFX = 0.2f;
-
     public AudioClip WoodenFootstep;
     public AudioClip LabFootstep;
     public AudioClip MetalLadderFootstep;
@@ -15,7 +13,7 @@ public class FootStepsSound : MonoBehaviour
 
     private void Start()
     {
-       soundPlayer.volume = volumeFX;
+        soundPlayer.volume = SoundFXMananger.Instance.volumeFX;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

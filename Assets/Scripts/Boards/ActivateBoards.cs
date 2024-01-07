@@ -12,7 +12,7 @@ public class ActivateBoards : GameActivable
     {
         if (!isStarting)
         {
-            SoundManager.Instance.ChangeMusicGradually(gamesound, 3f);
+            SoundManager.Instance.ChangeMusicGradually(gamesound, 2f);
             initBoardGame.enabled = true;
             isStarting = true;
         }

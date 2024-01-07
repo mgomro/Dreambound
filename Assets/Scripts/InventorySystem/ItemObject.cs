@@ -14,7 +14,7 @@ public class ItemObject : Interactable
     {
         InitSoundFX();
         InventoryManager.Instance.AddItem(itemData);
-        GameManager.instance.SetDefaultCursor();
+        GameManager.Instance.SetDefaultCursor();
         Destroy(gameObject);
     }
 

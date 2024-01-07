@@ -10,6 +10,7 @@ public class InteractRobot : Interactable
     public bool isActive = false;
 
     private SpriteRenderer spriteRenderer;
+    private Sprite currentSprite;
     private bool alreadyActivated = false;
 
     private void Start()
@@ -45,12 +46,14 @@ public class InteractRobot : Interactable
     private IEnumerator WaitForConversationEnd()
     {
         yield return new WaitUntil(() => !ConversationManager.Instance.IsConversationActive);
+        spriteRenderer.sprite = currentSprite;
         ConversationManager.Instance.StartConversation(conversations[1]); // Automatic dialogue after the robot ends the conversation.
     }
 
     private IEnumerator ChangeSprite()
     {
         float timeBetweenSprites = 1.5f;
+        currentSprite = spriteRenderer.sprite;
 
         foreach (Sprite sprite in spritesRobot)
         {

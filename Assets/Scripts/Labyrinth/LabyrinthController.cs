@@ -44,7 +44,7 @@ public class LabyrinthController : MonoBehaviour
         if (other.CompareTag("Player") && !firstTime)
         {
             helpButton.SetActive(true);
-            SoundManager.Instance.ChangeMusicGradually(gameAudio, 3f);
+            SoundManager.Instance.ChangeMusicGradually(gameAudio, 2f);
             lastPlayerPosition = playerPosition.position;
             initPlayerPosition.position = lastPlayerPosition;
 

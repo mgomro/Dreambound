@@ -7,10 +7,11 @@ public class SoundManager : MonoBehaviour
     public AudioClip SoundMenu;
     public AudioClip SoundIntro;
     public AudioClip SoundMain;
-    public float originalVolume = 0.3f;
+    public float musicVolume = 0.1f;
 
     private static SoundManager instance;
     private AudioSource audioSource;
+    private float originalVolume;
     
 
     private AudioClip originalSceneClip;
@@ -37,11 +38,21 @@ public class SoundManager : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
             audioSource.loop = true;
             audioSource.playOnAwake = false;
-            audioSource.volume = originalVolume;
+            audioSource.volume = musicVolume;
         }
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void SetVolume(float volume)
+    {
+        if (audioSource != null)
+        {
+            musicVolume = volume;
+            volume = Mathf.Clamp01(volume);
+            audioSource.volume = volume;
         }
     }
 
@@ -67,33 +78,42 @@ public class SoundManager : MonoBehaviour
 
     public void RestoreVolume(float amount, float duration)
     {
-        StartCoroutine(RestoreVolumeCoroutine(amount, duration));
+        if (originalVolume == musicVolume)
+            StartCoroutine(RestoreVolumeCoroutine(amount, duration));        
     }
 
     private IEnumerator LowerVolumeCoroutine(float amount, float duration)
     {
-        float targetVolume = audioSource.volume - amount;
+        originalVolume = audioSource.volume;
+        float targetVolume = originalVolume * (1 - amount);
+        float volumeChangePerSecond = (originalVolume - targetVolume) / duration;
 
         while (audioSource.volume > targetVolume)
         {
-            audioSource.volume -= amount / duration * Time.deltaTime;
+            audioSource.volume -= volumeChangePerSecond * Time.deltaTime;
+            if (audioSource.volume < targetVolume)
+            {
+                audioSource.volume = targetVolume;
+            }
             yield return null;
         }
-
-        audioSource.volume = targetVolume;
     }
 
     private IEnumerator RestoreVolumeCoroutine(float amount, float duration)
     {
-        float targetVolume = audioSource.volume + amount;
-
+        float currentVolume = audioSource.volume;
+        float targetVolume = currentVolume + (originalVolume * amount);
+        float volumeChangePerSecond = ((originalVolume * amount) / duration);
+        Debug.Log(targetVolume);
         while (audioSource.volume < targetVolume)
         {
-            audioSource.volume += amount / duration * Time.deltaTime;
+            audioSource.volume += volumeChangePerSecond * Time.deltaTime;
+            if (audioSource.volume > targetVolume)
+            {
+                audioSource.volume = targetVolume;
+            }
             yield return null;
         }
-
-        audioSource.volume = targetVolume;
     }
 
     public void LoadNextSound(float fadeDuration)
@@ -103,10 +123,10 @@ public class SoundManager : MonoBehaviour
 
         switch (nextIndexScene)
         {
-            case (2):
+            case (3):
                 nextSound = SoundIntro;
                 break;
-            case (3):
+            case (4):
                 nextSound = SoundMain;
                 break;
         }
@@ -159,7 +179,7 @@ public class SoundManager : MonoBehaviour
     private void PlayAudio(AudioClip clip)
     {
         audioSource.clip = clip;
-        audioSource.volume = originalVolume;
+        audioSource.volume = musicVolume;
         audioSource.Play();
     }
 }

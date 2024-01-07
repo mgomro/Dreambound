@@ -6,7 +6,7 @@ public class CamTrigger : MonoBehaviour
 {
     public Vector3 newCamPos, newPlayerPos;
 
-    CamController camControl;
+    private CamController camControl;
 
     void Start()
     {

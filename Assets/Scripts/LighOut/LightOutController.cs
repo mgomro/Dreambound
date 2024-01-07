@@ -120,7 +120,7 @@ public class LightOutController : MonoBehaviour
     IEnumerator DisableSprites()
     {
         DisableGame();
-
+        SoundFXMananger.Instance.PlaySound(SoundType.Alien);
         foreach (GameObject sprite in spritesToDisable)
         {
             yield return new WaitForSeconds(intervaloDeTiempo);

@@ -20,7 +20,7 @@ public class ActivateBoxes : GameActivable
     {
         if (!isStarting)
         {
-            SoundManager.Instance.ChangeMusicGradually(gameAudio, 3f);
+            SoundManager.Instance.ChangeMusicGradually(gameAudio, 2f);
 
             foreach (Rigidbody2D box in boxes)
             {

@@ -12,6 +12,7 @@ public class SoundFXMananger : MonoBehaviour
         ActivateTesla,
         ActiveCodePanel,
         ActiveNote,
+        Alien,
         AnswerBoard,
         ButtonLightOut,
         ButtonPanel,
@@ -32,7 +33,7 @@ public class SoundFXMananger : MonoBehaviour
         TurnPage
     }
 
-    public float volumeFX = 0.2f;
+    public float volumeFX = 0.08f;
     private Dictionary<SoundType, AudioClip> soundDictionary;
     private const string SoundFolderPath = "Audio/SoundFX/";
 
@@ -65,6 +66,11 @@ public class SoundFXMananger : MonoBehaviour
 
         soundDictionary = new Dictionary<SoundType, AudioClip>();
         StartCoroutine(LoadSoundsAsync());
+    }
+    public void SetVolume(float volume)
+    {
+        volume = Mathf.Clamp01(volume);
+        volumeFX = volume;
     }
 
     private IEnumerator LoadSoundsAsync()

@@ -75,6 +75,7 @@ public class PauseMenu : MonoBehaviour
     public void GoToMainMenu()
     {
         SceneManager.LoadScene(0);
+        DestroyObject();
 
         //Time.timeScale = 1f;
     }
@@ -87,5 +88,11 @@ public class PauseMenu : MonoBehaviour
     public void SoundClickButton()
     {
         SoundFXMananger.Instance.PlaySound(SoundType.ClickMenu);
+    }
+
+    private void DestroyObject()
+    {
+        LevelManager.Instance.DestroySelf();
+        GameManager.Instance.DestroySelf();
     }
 }
